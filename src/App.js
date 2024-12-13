@@ -4,20 +4,25 @@ import "./styles/index.css";
 import RestaurantCard from "./components/RestaurantCard";
 import Header from "./components/Header";
 import { resdata } from "./utils/resdata";
+import Filter from "./components/Filter";
 
 const App = () => {
   const resArr =
     resdata[1]["card"]["card"]["gridElements"]["infoWithStyle"]["restaurants"];
   const [listOfRestaurants, setListOfRestaurant] = useState(resArr);
-  const handleTopRatedRestaurents = () => {
-    setListOfRestaurant(
-      listOfRestaurants.filter((res) => res.info.avgRating >= 4.3)
-    );
+  const handleFilter = (filteredRestaurants) => {
+    // console.log("FILTER", filteredRestaurants);
+    setListOfRestaurant(filteredRestaurants);
   };
+
   return (
     <div className="App-page">
       <Header />
       <div className="main-container">
+        <Filter
+          listOfRestaurants={listOfRestaurants}
+          handleFilter={handleFilter}
+        />
         <div className="res-con">
           {listOfRestaurants.map((restaurant, index) => (
             <div className="res-container" key={index}>

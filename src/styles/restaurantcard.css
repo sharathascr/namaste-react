@@ -1,5 +1,6 @@
 .res-card {
   margin-bottom: 30px;
+  margin-right: 20px;
 }
 .res-image {
   width: 270px;
@@ -19,8 +20,14 @@
 }
 #restaurant-delivery {
 }
-#restaurant-locality {
+.restaurant-locality {
   padding: 0;
   margin: 0;
   color: rgb(68, 66, 66);
+}
+#ratingIcon {
+  margin-right: 5px;
+}
+#restaurant-delivery > li {
+  margin-left: 5px;
 }
