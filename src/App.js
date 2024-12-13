@@ -11,7 +11,6 @@ const App = () => {
     resdata[1]["card"]["card"]["gridElements"]["infoWithStyle"]["restaurants"];
   const [listOfRestaurants, setListOfRestaurant] = useState(resArr);
   const handleFilter = (filteredRestaurants) => {
-    // console.log("FILTER", filteredRestaurants);
     setListOfRestaurant(filteredRestaurants);
   };
 

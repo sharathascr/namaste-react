@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/Filter.css";
 
 function Filter({ listOfRestaurants, handleFilter }) {
-  console.log(listOfRestaurants);
   let filteredRestaurants = [];
   const handleButtonClick = (event) => {
     switch (event.target.getAttribute("id")) {
