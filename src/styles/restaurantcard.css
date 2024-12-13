@@ -1,0 +1,26 @@
+.res-card {
+  margin-bottom: 30px;
+}
+.res-image {
+  width: 270px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+#restaurant-name {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+#restaurant-rating {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+#restaurant-delivery {
+}
+#restaurant-locality {
+  padding: 0;
+  margin: 0;
+  color: rgb(68, 66, 66);
+}

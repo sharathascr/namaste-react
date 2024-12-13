@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/index.css";
+import "../styles/restaurantcard.css";
 import { RES_IMG_URL } from "../utils/contants";
 
 function RestaurantCard({ restaurant }) {
@@ -11,11 +11,13 @@ function RestaurantCard({ restaurant }) {
         src={RES_IMG_URL + res.cloudinaryImageId}
         alt={res.name}
       />
-      <h3>{res.name}</h3>
-      <h4>
-        {res.avgRating} <span>{res?.sla?.slaString}</span>
-      </h4>
-      <h4>{res.locality}</h4>
+      <p id="restaurant-name">{res.name}</p>
+      <p id="restaurant-rating">
+        <i class="fa-solid fa-star"></i>
+        {res.avgRating}{" "}
+        <span id="restaurant-delivery">{res?.sla?.slaString}</span>
+      </p>
+      <p id="restaurant-locality">{res.locality}</p>
     </div>
   );
 }

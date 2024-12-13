@@ -15,17 +15,12 @@ const App = () => {
     );
   };
   return (
-    <div>
+    <div className="App-page">
       <Header />
       <div className="main-container">
-        <div className="filter">
-          <button onClick={handleTopRatedRestaurents}>
-            Top Rated Restaurants
-          </button>
-        </div>
         <div className="res-con">
           {listOfRestaurants.map((restaurant, index) => (
-            <div className="res-container" key={restaurant.id}>
+            <div className="res-container" key={index}>
               <RestaurantCard restaurant={restaurant} />
             </div>
           ))}
