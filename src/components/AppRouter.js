@@ -1,8 +1,8 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
 import Login from "./Login.JS";
 import Signup from "./Signup";
 import Cart from "./Cart";
+import { Route, Routes } from "react-router";
 
 function AppRouter() {
   return (
