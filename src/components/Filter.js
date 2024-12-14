@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Filter.css";
 
 function Filter({ listOfRestaurants, handleFilter }) {
   let filteredRestaurants = [];
+  const [activeFilter, setActiveFilter] = useState("");
   const handleButtonClick = (event) => {
     switch (event.target.getAttribute("id")) {
       case "TopRestaurants":
         filteredRestaurants = listOfRestaurants.filter(
           (restaurant) => restaurant.info.avgRating >= 4.3
         );
-        event.target.style.backgroundColor = "#efefef";
+
         handleFilter(filteredRestaurants);
         break;
       case "fastDelivery":
@@ -28,7 +29,8 @@ function Filter({ listOfRestaurants, handleFilter }) {
         //   }
         // );
         filteredRestaurants = listOfRestaurants.filter(
-          (restaurant) => restaurant.info.costForTwo.substring(1, 4) <= 300
+          (restaurant) =>
+            restaurant.info.costForTwo.replace(/[^\d]/g, "") <= 300
         );
         handleFilter(filteredRestaurants);
         break;
@@ -38,11 +40,19 @@ function Filter({ listOfRestaurants, handleFilter }) {
         );
         handleFilter(filteredRestaurants);
         break;
+      default:
+        filteredRestaurants = listOfRestaurants;
     }
+    setActiveFilter(event.target.getAttribute("id"));
   };
   return (
     <div className="filter-component" onClick={handleButtonClick}>
-      <button id="TopRestaurants" className="filter-btn">
+      <button
+        id="TopRestaurants"
+        className={`filter-btn ${
+          activeFilter === "TopRestaurants" ? "active" : ""
+        }`}
+      >
         Top Restaurants
       </button>
       <button id="fastDelivery" className="filter-btn">
