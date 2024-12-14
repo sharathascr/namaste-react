@@ -36,7 +36,7 @@ function Login() {
               {...register("password", { required: true, minLength: 8 })}
             />
             {errors.password?.type === "required" && (
-              <p>password is required</p>
+              <p>Password is required</p>
             )}
             <button className="login-btn" type="submit">
               Login
