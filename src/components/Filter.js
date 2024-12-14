@@ -9,6 +9,7 @@ function Filter({ listOfRestaurants, handleFilter }) {
         filteredRestaurants = listOfRestaurants.filter(
           (restaurant) => restaurant.info.avgRating >= 4.3
         );
+        event.target.style.backgroundColor = "#efefef";
         handleFilter(filteredRestaurants);
         break;
       case "fastDelivery":
