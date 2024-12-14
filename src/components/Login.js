@@ -8,10 +8,10 @@ function Login() {
         <p className="login-heading"> Login</p>
         <p className="create-account-text">
           or <span className="create-text">create an account</span>
-          <div>
+          <div className="login-inputs">
             <input placeholder="Phone Number" />
             <input placeholder="password" />
-            <button className="login-btn">Log</button>
+            <button className="login-btn">Login</button>
           </div>
         </p>
       </div>
