@@ -18,7 +18,6 @@ function Home() {
       setListOfRestaurant(data);
     }
   }, [data]);
-  console.log("list", listOfRestaurants);
   const handleFilter = (filteredRestaurants) => {
     setListOfRestaurant(filteredRestaurants);
   };

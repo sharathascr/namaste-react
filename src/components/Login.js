@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Login.css";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function Login() {
   const {
@@ -10,8 +11,12 @@ function Login() {
     formState: { errors },
   } = useForm();
 
-  const handleLogin = (user) => {
-    console.log(user);
+  const handleLogin = async (user) => {
+    const loginResponse = await axios.post(
+      "http://localhost:6060/api/users/login-user",
+      user
+    );
+    alert(loginResponse.data.message);
   };
   return (
     <div className="login-page">
@@ -22,11 +27,9 @@ function Login() {
         </p>
         <form className="login-inputs" onSubmit={handleSubmit(handleLogin)}>
           <input
-            placeholder="Phone Number"
-            {...register("phoneNumber", {
+            placeholder="email..."
+            {...register("email", {
               required: true,
-              minLength: 10,
-              maxLength: 10,
             })}
           />
           {errors.phoneNumber?.type === "required" && (
@@ -38,7 +41,7 @@ function Login() {
             {...register("password", { required: true, minLength: 8 })}
           />
           {errors.password?.type === "required" && <p>Password is required</p>}
-          <button className="login-btn" type="submit">
+          <button type="submit" className="login-btn">
             Login
           </button>
         </form>
