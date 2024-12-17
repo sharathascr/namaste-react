@@ -3,30 +3,31 @@ import "../styles/restaurantcard.css";
 import { RES_IMG_URL } from "../utils/contants";
 
 function RestaurantCard({ restaurant }) {
-  const res = restaurant["info"];
   return (
     <div className="res-card">
       <img
         className="res-image"
-        src={RES_IMG_URL + res.cloudinaryImageId}
-        alt={res.name}
+        src={RES_IMG_URL + restaurant.cloudinaryImageId}
+        alt={restaurant.name}
       />
       <p id="restaurant-name">
-        {res.name.length > 35 ? res.name.substring(0, 35) + "..." : res.name}
+        {restaurant.name.length > 35
+          ? restaurant.name.substring(0, 35) + "..."
+          : restaurant.name}
       </p>
       <p id="restaurant-rating">
         <i className="fa-solid fa-star" id="ratingIcon"></i>
-        {res.avgRating}{" "}
+        {restaurant.avgRating}{" "}
         <span id="restaurant-delivery">
-          <li>{res?.sla?.slaString}</li>
+          <li>{restaurant?.sla?.slaString}</li>
         </span>
       </p>
       <p className="restaurant-locality">
-        {res.cuisines.join(", ").length > 35
-          ? res.cuisines.join(", ").substring(0, 35) + "..."
-          : res.cuisines.join(", ")}
+        {restaurant.cuisines.join(", ").length > 35
+          ? restaurant.cuisines.join(", ").substring(0, 35) + "..."
+          : restaurant.cuisines.join(", ")}
       </p>
-      <p className="restaurant-locality">{res.locality}</p>
+      <p className="restaurant-locality">{restaurant.locality}</p>
     </div>
   );
 }
