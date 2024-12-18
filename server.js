@@ -8,17 +8,25 @@ const userRoutes = require("./Backend/routes/usersRoutes");
 dotenv.config();
 
 const app = express();
-app.use(cors());
-
-mongoose.connect(
-  "mongodb+srv://cdb27:cdb27@atlascluster.e4ptmwb.mongodb.net/swiggy?retryWrites=true&w=majority&appName=AtlasCluster"
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "PUT", "POST", "DELETE"],
+    credentials: true,
+  })
 );
+
+mongoose.connect(process.env.MONGODB_URL);
 
 const db = mongoose.connection;
 db.on("open", () => console.log("MongoDb connection successful"));
-db.on("error", (err) => console.log("Error ion connection", err));
+db.on("error", (err) => {
+  console.log("Error in mongodb connection", err);
+  process.exit(1);
+});
 
 app.use("/api/restaurants", restaurantApi);
 app.use("/api/users", userRoutes);
 
-app.listen(6060, () => console.log(`Server is running on 6060...`));
+const PORT = process.env.PORT || 6060;
+app.listen(PORT, () => console.log(`Server is running on ${PORT}...`));
