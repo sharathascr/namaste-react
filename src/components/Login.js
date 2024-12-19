@@ -2,21 +2,36 @@ import React from "react";
 import "../styles/Login.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 function Login() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
+  const navigate = useNavigate();
 
   const handleLogin = async (user) => {
-    const loginResponse = await axios.post(
-      "http://localhost:6060/api/users/login-user",
-      user
-    );
-    alert(loginResponse.data.message);
+    try {
+      const loginResponse = await axios.post(
+        "http://localhost:6060/api/users/login-user",
+        user
+      );
+      alert(loginResponse.data.message);
+      if (loginResponse.data.message === "login successful") {
+        reset();
+        //Redirect the user (use navigate if routing is implemented)
+        console.log("User logged in successfully");
+        navigate("/");
+      }
+    } catch (error) {
+      alert(
+        error.response?.data?.message ||
+          "An error occurred during login Please try again"
+      );
+    }
   };
   return (
     <div className="login-page">
@@ -29,20 +44,30 @@ function Login() {
           <input
             placeholder="email..."
             {...register("email", {
-              required: true,
+              required: "Email is required",
+              pattern: {
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                message: "Invalid email format",
+              },
             })}
           />
-          {errors.phoneNumber?.type === "required" && (
-            <p>phone number is required</p>
-          )}
+          {errors.email && <p className="error-text">{errors.email.message}</p>}
           <input
             placeholder="password"
             type="password"
-            {...register("password", { required: true, minLength: 8 })}
+            {...register("password", {
+              required: "password is required",
+              minLength: {
+                value: 8,
+                message: "Password must be 8 characters",
+              },
+            })}
           />
-          {errors.password?.type === "required" && <p>Password is required</p>}
-          <button type="submit" className="login-btn">
-            Login
+          {errors.password && (
+            <p className="error-text">{errors.password.message}</p>
+          )}
+          <button type="submit" className="login-btn" disabled={isSubmitting}>
+            {isSubmitting ? "Logging in..." : "Login"}
           </button>
         </form>
       </div>

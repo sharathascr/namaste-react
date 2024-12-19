@@ -1,16 +1,37 @@
 import React from "react";
 import "../styles/Signup.css";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
+import axios from "axios";
 
 function Signup() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
-  const handlesignup = () => {
-    console.log("Handled Signup");
+  const navigate = useNavigate();
+  const handlesignup = async (user) => {
+    try {
+      console.log(user);
+      const signupResponse = await axios.post(
+        "http://localhost:6060/api/users/save-user",
+        user
+      );
+      console.log(signupResponse);
+      alert(signupResponse.data.message);
+      if (signupResponse.data.message === "user created successfully") {
+        reset();
+        navigate("/login");
+      }
+    } catch (error) {
+      alert(
+        error.response?.data?.message ||
+          error ||
+          "An error occurred during signup please try again"
+      );
+    }
   };
 
   return (
@@ -20,23 +41,39 @@ function Signup() {
         <input
           type="text"
           placeholder="Username..."
-          {...register("username", { required: true })}
+          {...register("username", { required: "username is required" })}
         />
-        {errors.username?.type === "required" && <p>Username is required</p>}
+        {errors.username && (
+          <p className="error-text">{errors.username.message}</p>
+        )}
         <input
           type="email"
           placeholder="Email..."
-          {...register("email", { required: true })}
+          {...register("email", {
+            required: "email is required",
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: "Invalid email format",
+            },
+          })}
         />
-        {errors.email?.type === "required" && <p>Email is required</p>}
+        {errors.email && <p className="error-text">{errors.email.message}</p>}
         <input
           type="password"
           placeholder="Password..."
-          {...register("password", { required: true })}
+          {...register("password", {
+            required: "password is required",
+            minLength: {
+              value: 8,
+              message: "password must be 8 characters",
+            },
+          })}
         />
-        {errors.password?.type === "required" && <p>Password is required</p>}
-        <button className="signup-btn" type="submit">
-          Signup
+        {errors.password && (
+          <p className="error-text">{errors.password.message}</p>
+        )}
+        <button type="submit" className="signup-btn" disabled={isSubmitting}>
+          {isSubmitting ? "Signing up..." : "Sign up"}
         </button>
       </form>
     </div>

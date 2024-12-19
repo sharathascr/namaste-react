@@ -1,10 +1,12 @@
 .filter-component {
   margin-bottom: 30px;
+  margin-right: 55px;
   display: flex;
   justify-content: space-around;
 }
 .filter-btn {
   background-color: transparent;
+  margin: 0 20px;
   padding: 7px 13px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 18px;

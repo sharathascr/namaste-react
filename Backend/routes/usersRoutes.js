@@ -23,6 +23,7 @@ userRoutes.post("/save-user", async (req, res) => {
   try {
     const { username, email, password } = req.body;
     if (!username || !email || !password) {
+      console.log("Checking fields");
       res.status(400).send({ message: "All fields are required" });
     }
     const existingUser = await User.findOne({ email });
@@ -45,17 +46,19 @@ userRoutes.post("/login-user", async (req, res) => {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
-      res.status(400).send({ message: "Email and password are required" });
-      const existingUser = await User.findOne({ email });
-      if (!existingUser) {
-        return res.status(404).send({ message: "user does not exists" });
-      }
-      const isMatch = await argon2.verify(existingUser.password, password);
-      if (isMatch) {
-        res.status(200).send({ message: "Login sucessful" });
-      } else {
-        res.status(400).send({ message: "invalid password" });
-      }
+      return res
+        .status(400)
+        .send({ message: "Email and password are required" });
+    }
+    const existingUser = await User.findOne({ email });
+    if (!existingUser) {
+      return res.status(404).send({ message: "user does not exists" });
+    }
+    const isMatch = await argon2.verify(existingUser.password, password);
+    if (isMatch) {
+      res.status(200).send({ message: "Login sucessful" });
+    } else {
+      res.status(401).send({ message: "invalid password" });
     }
   } catch (error) {
     console.error("Error logging users", error);

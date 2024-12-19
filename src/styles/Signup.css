@@ -19,3 +19,7 @@
   background-color: #f15700;
   border: none;
 }
+.error-text {
+  color: red;
+  font-size: 0.8rem;
+}

@@ -1,32 +1,41 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import "../styles/index.css";
-import { resdata } from "../utils/resdata";
 import Filter from "./Filter";
 import { useFetch } from "./hooks/useFetch";
 import ShimmerUI from "./ShimmerUI";
+import Search from "./Search";
 
 function Home() {
-  const data = useFetch(
-    "http://localhost:6060/api/restaurants/getAllRestaurants"
-  );
-  // const resArr =
-  //   resdata[1]["card"]["card"]["gridElements"]["infoWithStyle"]["restaurants"];
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
-  useEffect(() => {
-    if (data) {
-      setListOfRestaurant(data);
-    }
-  }, [data]);
+  try {
+    const data = useFetch(
+      "http://localhost:6060/api/restaurants/getAllRestaurants"
+    );
+    useEffect(() => {
+      if (data) {
+        setListOfRestaurant(data);
+      }
+    }, [data]);
+  } catch (error) {
+    alert(error?.response?.message || "Error in fetching data from backend");
+  }
   const handleFilter = (filteredRestaurants) => {
     setListOfRestaurant(filteredRestaurants);
   };
   return (
     <div className="main-container">
-      <Filter
-        listOfRestaurants={listOfRestaurants}
-        handleFilter={handleFilter}
-      />
+      <div className="main-header">
+        <div className="search-container">
+          <Search listOfRestaurants={listOfRestaurants} />
+        </div>
+        <div className="filter-container">
+          <Filter
+            listOfRestaurants={listOfRestaurants}
+            handleFilter={handleFilter}
+          />
+        </div>
+      </div>
       <div className="res-con">
         {listOfRestaurants.length != 0 ? (
           listOfRestaurants.map((restaurant, index) => (

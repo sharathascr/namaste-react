@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const restaurantApi = require("./Backend/routes/restaurantRoutes");
+const restaurantRoutes = require("./Backend/routes/restaurantRoutes");
 const userRoutes = require("./Backend/routes/usersRoutes");
 
 dotenv.config();
@@ -25,8 +25,8 @@ db.on("error", (err) => {
   process.exit(1);
 });
 
-app.use("/api/restaurants", restaurantApi);
+app.use("/api/restaurants", restaurantRoutes);
 app.use("/api/users", userRoutes);
 
-const PORT = process.env.PORT || 6060;
+const PORT = process.env.BACKEND_PORT || 6060;
 app.listen(PORT, () => console.log(`Server is running on ${PORT}...`));
