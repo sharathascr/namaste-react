@@ -1,0 +1,63 @@
+.res-link {
+  text-decoration: none;
+  color: black;
+}
+.star-rating {
+  margin: 2px 4px 0 0;
+  color: #1e933c;
+}
+.restaurant-rating {
+  display: flex;
+}
+#restaurant-items-page {
+  width: 50%;
+  margin: auto;
+}
+#restaurant-header {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 10px 10px gray;
+}
+.restaurant-section {
+  margin-top: 40px;
+}
+.costForTwo {
+  margin-left: 5px;
+}
+#restaurant-address {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-left: 20px;
+}
+.address-section {
+  margin: 10px 0;
+}
+
+.outlet {
+  margin-right: 5px;
+}
+.areaName {
+  color: gray;
+}
+.star-small {
+  font-size: 13px;
+  padding-bottom: 10px;
+  color: red;
+}
+.rating {
+  font-size: 0.9rem;
+}
+.res-items-section {
+  margin: 30px;
+}
+.item-name {
+  color: #414449;
+  font-weight: bold;
+}
+.item-rating {
+  margin: 10px 0;
+}

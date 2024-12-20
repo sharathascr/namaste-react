@@ -8,6 +8,26 @@ const restaurantSchema = new mongoose.Schema({
   areaName: String,
   costForTwo: String,
   cuisines: [String],
+  items: [
+    {
+      id: { type: String, required: true },
+      name: { type: String, required: true },
+      category: { type: String },
+      description: { type: String },
+      imageId: { type: String },
+      inStock: { type: Number },
+      isVeg: { type: Number },
+      price: { type: Number },
+      defaultPrice: { type: Number },
+      ratings: {
+        aggregatedRating: {
+          rating: { type: String },
+          ratingCount: { type: String },
+          ratingCountV2: { type: String },
+        },
+      },
+    },
+  ],
   avgRating: Number,
   parentId: String,
   avgRatingString: String,

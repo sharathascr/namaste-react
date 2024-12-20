@@ -9,7 +9,9 @@ export const Header = () => {
   const { appState, appDispatch } = useContext(AppContext);
   return (
     <div className="nav-container">
-      <img className="nav-logo" src={SWIGGY_LOGO_URL} alt="nav-logo" />
+      <Link to="/">
+        <img className="nav-logo" src={SWIGGY_LOGO_URL} alt="nav-logo" />
+      </Link>
       <ul className="nav-items">
         <li>
           <Link to="/" className="nav-link">
