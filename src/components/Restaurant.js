@@ -45,25 +45,33 @@ function Restaurant() {
               <p>{restaurant?.sla?.slaString}</p>
             </div>
           </div>
-          {restaurant.items.map((res) => (
-            <div className="item-container">
+          {restaurant.items.map((res, index) => (
+            <div className="item-container" key={index}>
               <div className="res-items-section">
                 <p className="item-name">{res?.name}</p>
-                <p className="item-price">{res?.price || res?.defaultPrice}</p>
-                <p className="item-rating">
-                  {" "}
-                  <i className="fa-solid fa-star star-small"></i>{" "}
-                  <span className="rating">
-                    {res?.ratings?.aggregatedRating?.rating}
-                  </span>
-                  <span>({res?.ratings?.aggregatedRating?.ratingCountV2})</span>
+                <p className="item-price">
+                  ₹{res?.price / 100 || res?.defaultPrice / 100}
                 </p>
-                <p className="item-description">{res?.description}</p>
+                {res?.ratings?.aggregatedRating?.rating && (
+                  <p className="item-rating">
+                    {" "}
+                    <i className="fa-solid fa-star star-small"></i>{" "}
+                    <span className="rating">
+                      {res?.ratings?.aggregatedRating?.rating}
+                    </span>
+                    <span>
+                      ({res?.ratings?.aggregatedRating?.ratingCountV2})
+                    </span>
+                  </p>
+                )}
+                <p className="item-description">
+                  {res?.description?.substring(0, 100).concat("...")}
+                </p>
               </div>
               <div className="div-item-img">
                 <img
                   className="item-img"
-                  src={ITEM_IMG_URL + res?.cloudinaryImageId}
+                  src={ITEM_IMG_URL + res?.imageId}
                   alt={res?.name}
                 />
                 <button className="item-add-btn">Add</button>

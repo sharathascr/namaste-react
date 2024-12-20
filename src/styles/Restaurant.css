@@ -77,6 +77,8 @@
 }
 .item-img {
   width: 150px;
+  height: 130px;
+  object-fit: cover;
   border-radius: 20px;
 }
 .div-item-img {
@@ -85,7 +87,7 @@
 .item-add-btn {
   position: absolute;
   font-size: 1.1rem;
-  bottom: 30px;
+  bottom: 40px;
   left: 39px;
   background-color: #fff;
   color: #1ba672;
