@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/Login.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { AppContext } from "../context/AppContextProvider";
 
 function Login() {
   const {
@@ -11,6 +12,7 @@ function Login() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm();
+  const { appState, appDispatch } = useContext(AppContext);
   const navigate = useNavigate();
 
   const handleLogin = async (user) => {
@@ -20,10 +22,14 @@ function Login() {
         user
       );
       alert(loginResponse.data.message);
-      if (loginResponse.data.message === "login successful") {
+      if (loginResponse.data.message === "Login successful") {
         reset();
+        appDispatch({ type: "SET_LOGGEDIN_STATUS", payload: true });
+        appDispatch({
+          type: "SET_LOGGEDIN_USER",
+          payload: loginResponse.data.user.username,
+        });
         //Redirect the user (use navigate if routing is implemented)
-        console.log("User logged in successfully");
         navigate("/");
       }
     } catch (error) {

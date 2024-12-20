@@ -27,7 +27,10 @@ function Home() {
     <div className="main-container">
       <div className="main-header">
         <div className="search-container">
-          <Search listOfRestaurants={listOfRestaurants} />
+          <Search
+            listOfRestaurants={listOfRestaurants}
+            handleFilter={handleFilter}
+          />
         </div>
         <div className="filter-container">
           <Filter

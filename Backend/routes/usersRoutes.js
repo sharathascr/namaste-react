@@ -56,8 +56,9 @@ userRoutes.post("/login-user", async (req, res) => {
     }
     const isMatch = await argon2.verify(existingUser.password, password);
     if (isMatch) {
-      res.status(200).send({ message: "Login sucessful" });
+      res.status(200).send({ message: "Login successful", user: existingUser });
     } else {
+      console.log("Hee");
       res.status(401).send({ message: "invalid password" });
     }
   } catch (error) {

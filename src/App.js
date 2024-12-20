@@ -1,15 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React, { useContext } from "react";
 import { BrowserRouter } from "react-router";
 import AppRouter from "./components/AppRouter";
 import Header from "./components/Header";
+import { AppContextProvider } from "./context/AppContextProvider";
 export const App = () => {
   return (
-    <BrowserRouter>
-      <div className="App-page">
-        <Header />
-        <AppRouter />
-      </div>
-    </BrowserRouter>
+    <AppContextProvider>
+      <BrowserRouter>
+        <div className="App-page">
+          <Header />
+          <AppRouter />
+        </div>
+      </BrowserRouter>
+    </AppContextProvider>
   );
 };

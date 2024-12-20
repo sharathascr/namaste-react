@@ -14,12 +14,10 @@ function Signup() {
   const navigate = useNavigate();
   const handlesignup = async (user) => {
     try {
-      console.log(user);
       const signupResponse = await axios.post(
         "http://localhost:6060/api/users/save-user",
         user
       );
-      console.log(signupResponse);
       alert(signupResponse.data.message);
       if (signupResponse.data.message === "user created successfully") {
         reset();
