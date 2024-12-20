@@ -2,14 +2,23 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const useFetchRestaurant = (url) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      const result = await axios.get(url);
-      // console.log(result.data);
-      setData(result.data);
+      setLoading(true);
+      try {
+        const result = await axios.get(url);
+        // console.log(result.data);
+        setData(result.data);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
     }
     fetchData();
   }, [url]);
-  return data;
+  return { data, loading, error };
 };
