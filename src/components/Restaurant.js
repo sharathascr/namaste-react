@@ -8,20 +8,35 @@ import axios from "axios";
 function Restaurant() {
   const { restaurantName } = useParams();
   const [restaurant, setRestaurant] = useState(null);
+  // try {
+  //   useEffect(() => {
+  //     const fetchData = async () => {
+  //       const result =
+  //         await axios.get(`http://localhost:6060/api/restaurants/getRestaurantByName/${restaurantName}
+  //           `);
+  //       setRestaurant(result.data);
+  //     };
+  //     fetchData();
+  //   }, [restaurantName]);
+  // } catch (error) {
+  //   console.log("Error in fetching restaurant", error);
+  // }
+  const handleAddItem = (res) => {
+    console.log(res.id);
+  };
   try {
+    const { data, loading, error } = useFetchRestaurant(
+      `http://localhost:6060/api/restaurants/getRestaurantByName/${restaurantName}`
+    );
     useEffect(() => {
-      const fetchData = async () => {
-        const result =
-          await axios.get(`http://localhost:6060/api/restaurants/getRestaurantByName/${restaurantName}
-            `);
-        setRestaurant(result.data);
-      };
-      fetchData();
-    }, [restaurantName]);
+      if (data) {
+        setRestaurant(data);
+      }
+    }, [data]);
+    // setRestaurant(data);
   } catch (error) {
     console.log("Error in fetching restaurant", error);
   }
-  console.log(restaurant);
   return (
     <div id="restaurant-items-page">
       {restaurant ? (
@@ -45,39 +60,50 @@ function Restaurant() {
               <p>{restaurant?.sla?.slaString}</p>
             </div>
           </div>
-          {restaurant.items.map((res, index) => (
-            <div className="item-container" key={index}>
-              <div className="res-items-section">
-                <p className="item-name">{res?.name}</p>
-                <p className="item-price">
-                  ₹{res?.price / 100 || res?.defaultPrice / 100}
-                </p>
-                {res?.ratings?.aggregatedRating?.rating && (
-                  <p className="item-rating">
-                    {" "}
-                    <i className="fa-solid fa-star star-small"></i>{" "}
-                    <span className="rating">
-                      {res?.ratings?.aggregatedRating?.rating}
-                    </span>
-                    <span>
-                      ({res?.ratings?.aggregatedRating?.ratingCountV2})
-                    </span>
+          {restaurant.items.length != 0 ? (
+            restaurant.items.map((res, index) => (
+              <div className="item-container" key={index}>
+                <div className="res-items-section">
+                  <p className="item-name">{res?.name}</p>
+                  <p className="item-price">
+                    ₹{res?.price / 100 || res?.defaultPrice / 100}
                   </p>
-                )}
-                <p className="item-description">
-                  {res?.description?.substring(0, 100).concat("...")}
-                </p>
+                  {res?.ratings?.aggregatedRating?.rating && (
+                    <p className="item-rating">
+                      {" "}
+                      <i className="fa-solid fa-star star-small"></i>{" "}
+                      <span className="rating">
+                        {res?.ratings?.aggregatedRating?.rating}
+                      </span>
+                      <span className="noOfratings">
+                        ({res?.ratings?.aggregatedRating?.ratingCountV2})
+                      </span>
+                    </p>
+                  )}
+                  <p className="item-description">
+                    {res?.description?.length > 100
+                      ? res?.description?.substring(0, 100).concat("...")
+                      : res?.description}
+                  </p>
+                </div>
+                <div className="div-item-img">
+                  <img
+                    className="item-img"
+                    src={ITEM_IMG_URL + res?.imageId}
+                    alt={res?.name}
+                  />
+                  <button
+                    className="item-add-btn"
+                    onClick={() => handleAddItem(res)}
+                  >
+                    Add
+                  </button>
+                </div>
               </div>
-              <div className="div-item-img">
-                <img
-                  className="item-img"
-                  src={ITEM_IMG_URL + res?.imageId}
-                  alt={res?.name}
-                />
-                <button className="item-add-btn">Add</button>
-              </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <h2 className="no-items-heading">No items</h2>
+          )}
         </div>
       ) : (
         <h1>Loading...</h1>

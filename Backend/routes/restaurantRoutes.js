@@ -14,7 +14,6 @@ restaurantRoutes.get("/getAllRestaurants", async (req, res) => {
 });
 
 restaurantRoutes.put("/add-items/:resId", async (req, res) => {
-  console.log("hu");
   const { resId } = req.params;
   const newItems = req.body;
   const result = await Restaurants.updateOne(

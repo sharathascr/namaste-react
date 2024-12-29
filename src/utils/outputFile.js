@@ -1,20 +1,20 @@
-const cakezone= [
+const theobrama= [
   {
     "card": {
       "info": {
-        "id": "124595778",
-        "name": "Opulent Butterscotch Bliss Cake",
-        "category": "Celebration Cakes",
-        "description": "Indulge in a symphony of sweet, buttery flavors layers of moist vanilla sponge cake, generously interspersed with a velvety butterscotch crush, creates blend of indulgence.",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/ac0721e3-d8ff-4b6d-a310-1f0396a1a473_a785bcdf-4854-476c-97cd-f74dcb6c89c8.jpg",
+        "id": "127044037",
+        "name": "Almond Rocks (250g)",
+        "category": "Christmas Specials",
+        "description": "Perfectly toasted and crisp almonds coated in dark chocolate.",
+        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/c74ca2e7-b6ea-4499-bd51-35ea03c01e1b_7eb8c543-5b4b-4f10-9b4e-87701bd19414.jpg",
         "inStock": 1,
         "isVeg": 1,
-        "defaultPrice": 53900,
+        "price": 65000,
         "ratings": {
           "aggregatedRating": {
-            "rating": "4.4",
-            "ratingCount": "29 ratings",
-            "ratingCountV2": "29"
+            "rating": "4.8",
+            "ratingCount": "7 ratings",
+            "ratingCountV2": "7"
           }
         }
       }
@@ -23,35 +23,14 @@ const cakezone= [
   {
     "card": {
       "info": {
-        "id": "117955007",
-        "name": "Belgium Chocolate Cake - 500 Grams",
-        "category": "Celebration Cakes",
-        "description": "Experience chocolate indulgence with our exquisite Belgian Chocolate Cake. Each layer of moist chocolate cake is generously infused with the distinctive taste of authentic Belgian chocolate ganache, creates a blend of rich dessert",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/7b9fd4da-5b55-4e9a-ba37-608c293e20d6_a8746dcd-a1fa-40fe-8f42-70734e69083d.jpg",
+        "id": "127044038",
+        "name": "Almond Rocks (500g)",
+        "category": "Christmas Specials",
+        "description": "Perfectly toasted and crisp almonds coated in dark chocolate.",
+        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/ab2ed620-bc4c-4415-9c9f-8e4dd53dd8e5_353282c2-49e4-42c2-a1a2-c5f055bc1059.jpg",
         "inStock": 1,
         "isVeg": 1,
-        "price": 64900,
-        "ratings": {
-          "aggregatedRating": {
-            "rating": "3.6",
-            "ratingCount": "8 ratings",
-            "ratingCountV2": "8"
-          }
-        }
-      }
-    }
-  },
-  {
-    "card": {
-      "info": {
-        "id": "121646771",
-        "name": "Choco Mocha Cake - 500 Grams",
-        "category": "Celebration Cakes",
-        "description": "Layers of moist vanilla infused with irish coffee syrup and cocoa powder dusting beautifully complements the sweetness. Perfect cake for all celebrations",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/39860a8d-fb77-4a60-b11f-96326035485d_e12b57af-155c-4ec6-a011-cf31c6ba1f91.jpg",
-        "inStock": 1,
-        "isVeg": 1,
-        "price": 72900,
+        "price": 130000,
         "ratings": {
           "aggregatedRating": {}
         }
@@ -61,20 +40,132 @@ const cakezone= [
   {
     "card": {
       "info": {
-        "id": "46349435",
-        "name": "Chocolate Truffle Eggless Cake",
-        "category": "Celebration Cakes",
-        "description": "[Eggless/Veg] Indulge in a decadent chocolate experience a chocolate sponge cake, layered with sumptuous Choco truffle, creates a symphony of cocoa flavors and velvety textures. (6 Serving, 388 calories each, protein-5g each, carbs - 53g each)",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/ece1cbe0-c154-450b-896f-71c98db1bf1f_555e12f5-c4fa-4c3d-9604-0741de47cd8a.jpg",
+        "id": "135638784",
+        "name": "Premium Gift Hamper Bag",
+        "category": "Gifting",
+        "description": "An assortment of our signature products - Eggless assorted brownies, Chocolate chip cookies (8pc), Butter palmiers (50g), Sweet Sesame crackers (100g) & Cheese crackers (100g)",
+        "imageId": "150f32549957a2aa3e586fd899ea4b08",
         "inStock": 1,
         "isVeg": 1,
-        "defaultPrice": 52900,
+        "price": 79900,
+        "ratings": {
+          "aggregatedRating": {}
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "100256939",
+        "name": "Indulgence Gift Hamper Basket",
+        "category": "Gifting",
+        "description": "An assortment of our signature products - Assorted brownies (6pc), Chocolate chip cookies (8pc), Dense loaf (350g), Butter cookies (10pc), Mava cake (300g), Almond biscotti (150g), Chocolate coated biscuits (9pc), Pound Cake (210g) & Almond rocks (250g)",
+        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/25/d38f1038-9013-4a07-9f9b-6a3553242280_692e4a3f-58f5-415b-b932-53174d586b11.jpg_compressed",
+        "inStock": 1,
+        "price": 320000,
+        "ratings": {
+          "aggregatedRating": {}
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "132233935",
+        "name": "Indulgence Gift Hamper Basket (Eggless)",
+        "category": "Gifting",
+        "description": "An assortment of signature products- Assorted Eggless Brownies (6pc), Chocolate Chip Cookies (8pc), Eggless Dense loaf (260g), Cheese Crackers (100g), Eggless Mava Cake (225g), Orange Cookies (12pc), Chocolate coated biscuits (9pc), Butter Cookies (10pc), Almond Rocks (250g)",
+        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/25/d38f1038-9013-4a07-9f9b-6a3553242280_692e4a3f-58f5-415b-b932-53174d586b11.jpg_compressed",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 320000,
+        "ratings": {
+          "aggregatedRating": {}
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "100256940",
+        "name": "Luxury Gift Hamper Basket",
+        "category": "Gifting",
+        "description": "An assortment of our signature products - Assorted brownies (6pc), Chocolate chip cookies (8pc), Dense loaf (350g), Butter cookies (10pc), Mava cake (300g), Black pepper sourdough crackers (100g) & Almond biscotti (150g)",
+        "imageId": "ae2866da7d053115a5671a81bab04613",
+        "inStock": 1,
+        "price": 230000,
+        "ratings": {
+          "aggregatedRating": {}
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "100256941",
+        "name": "Premium Gift Hamper Basket",
+        "category": "Gifting",
+        "description": "An assortment of our signature products - Assorted brownies (4pc), Double choco chip cookies (8pc), Dense loaf (350g), Butter cookies (10pc), Ragi crackers (100g) & Butter palmiers (50g)",
+        "imageId": "6f121c775297f6266d1bf371e2d56b97",
+        "inStock": 1,
+        "price": 170000,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.6",
+            "ratingCount": "3 ratings",
+            "ratingCountV2": "3"
+          }
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "132233933",
+        "name": "Premium Gift Hamper Basket (Eggless)",
+        "category": "Gifting",
+        "description": "An assortment of signature products - Assorted Eggless Brownies (4pc), Chocolate Chip cookies (8pc), Eggless Dense loaf (260g), Butter Cookies (10pc), Ragi Crackers (100g), Butter Palmiers (50g)",
+        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/25/9b12f1bd-19a3-4047-a0f3-5674f911b5a7_41d1ead7-109b-4d19-9c3e-be3488519e84.jpg",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 170000,
+        "ratings": {
+          "aggregatedRating": {}
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "133485670",
+        "name": "Eggless Rich Chocolate Cake [1/2kg]",
+        "category": "Cakes",
+        "description": "A traditional cake made by layering chocolate sponge with rich and smooth chocolate cream, and decorated with dark chocolate.",
+        "imageId": "f2bd0cb79c209530c0ec4a8d864ed54c",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 59500,
+        "offerTags": [
+          {
+            "title": "20% OFF",
+            "subTitle": "USE PARTY",
+            "textColor": "#DB6742",
+            "backgroundColor": "#FAE8E3",
+            "matchText": "SILD"
+          }
+        ],
         "isBestseller": true,
         "ratings": {
           "aggregatedRating": {
-            "rating": "4.4",
-            "ratingCount": "611 ratings",
-            "ratingCountV2": "611"
+            "rating": "4.8",
+            "ratingCount": "34 ratings",
+            "ratingCountV2": "34"
           }
         }
       }
@@ -83,19 +174,29 @@ const cakezone= [
   {
     "card": {
       "info": {
-        "id": "46349443",
-        "name": "Death by Chocolate Eggless Cake",
-        "category": "Celebration Cakes",
-        "description": "[Eggless/Veg] Indulge in the moist chocolate sponge cake layered with velvety Choco truffle and garnished with Choco chips create a symphony of chocolate and velvety textures. (6 Serving, 243 calories each, protein-4g each, carbs-39g each)",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/0f4773b3-0082-4acd-98a4-379f2de1c4ee_a2277277-9834-40a2-9468-d35442878ff1.jpg",
+        "id": "133485671",
+        "name": "Eggless Butterscotch & Milk Chocolate Cake [1/2kg]",
+        "category": "Cakes",
+        "description": "A moist butterscotch cake made with vanilla cream, house-made butterscotch sauce, crunchy butterscotch, and finished with a milk chocolate glaze.",
+        "imageId": "18c696fa1421cbae87fe1be2dae9ca53",
         "inStock": 1,
         "isVeg": 1,
-        "defaultPrice": 70900,
+        "price": 56500,
+        "offerTags": [
+          {
+            "title": "20% OFF",
+            "subTitle": "USE PARTY",
+            "textColor": "#DB6742",
+            "backgroundColor": "#FAE8E3",
+            "matchText": "SILD"
+          }
+        ],
+        "isBestseller": true,
         "ratings": {
           "aggregatedRating": {
-            "rating": "3.8",
-            "ratingCount": "76 ratings",
-            "ratingCountV2": "76"
+            "rating": "4.5",
+            "ratingCount": "55 ratings",
+            "ratingCountV2": "55"
           }
         }
       }
@@ -104,19 +205,19 @@ const cakezone= [
   {
     "card": {
       "info": {
-        "id": "91011778",
-        "name": "Mango Fruit Eggless Cake",
-        "category": "Celebration Cakes",
-        "description": "[Eggless/Veg] This delectable dessert crafted with moist vanilla cake layered with mango crush, fruit filling and adorned with pista. Promises a slice of paradise in every bite.",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/13/254678c6-a736-4344-955c-8797d0ad23ef_9b3600a8-26e5-4e23-892b-4f05ab7c140c.jpg",
+        "id": "127044025",
+        "name": "Eggless Dutch Truffle Cake [1/2kg]",
+        "category": "Cakes",
+        "description": "Dark chocolate ganache with chocolate sponge.",
+        "imageId": "01f50ea13d7b168d8ab2810a73e1e314",
         "inStock": 1,
         "isVeg": 1,
-        "defaultPrice": 52900,
+        "price": 62500,
         "ratings": {
           "aggregatedRating": {
-            "rating": "3.1",
-            "ratingCount": "54 ratings",
-            "ratingCountV2": "54"
+            "rating": "4.7",
+            "ratingCount": "96 ratings",
+            "ratingCountV2": "96"
           }
         }
       }
@@ -125,20 +226,163 @@ const cakezone= [
   {
     "card": {
       "info": {
-        "id": "46349409",
-        "name": "Black Forest Eggless Cake",
-        "category": "Celebration Cakes",
-        "description": "[ Eggless/Veg] Layers of moist chocolate cake, with cherry filling, lashings of whipped cream between each layer and topped with cherries and chocolate shavings. Perfect cake for all celebrations (6 Serving, 327 calories each, protein-5g each, carbs-56g each)",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/4/f6d84f36-b9e6-4952-a4b1-07d4eb3fde24_dcfd53dc-36c0-4c05-9bc6-4a5eb894a292.jpg",
+        "id": "127044023",
+        "name": "Eggless Fresh Cream Pineapple Cake [1/2kg]",
+        "category": "Cakes",
+        "description": "Fresh cream cake with home made pineapple compote.",
+        "imageId": "6f46ef359dc4981ae6a0e757f1f6e434",
         "inStock": 1,
         "isVeg": 1,
-        "defaultPrice": 52900,
+        "price": 65000,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.5",
+            "ratingCount": "46 ratings",
+            "ratingCountV2": "46"
+          }
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "127044028",
+        "name": "Chocoholic Cake [1/2kg]",
+        "category": "Cakes",
+        "description": "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
+        "imageId": "4cfe67bfb168ed03ba5f2effaa341522",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 72500,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.9",
+            "ratingCount": "38 ratings",
+            "ratingCountV2": "38"
+          }
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "127044021",
+        "name": "Eggless Dutch Truffle Cake [1kg]",
+        "category": "Cakes",
+        "description": "Dark chocolate ganache with chocolate sponge.",
+        "imageId": "3b08c25da25361732fdc817a6045a85d",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 125000,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.8",
+            "ratingCount": "18 ratings",
+            "ratingCountV2": "18"
+          }
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "127044032",
+        "name": "Fresh Cream Pineapple Cake [1/2kg]",
+        "category": "Cakes",
+        "description": "Fresh cream cake with home made pineapple compote.",
+        "imageId": "9a16fee90eb0b4079a11a6dd2ff40a43",
+        "inStock": 1,
+        "price": 65000,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.1",
+            "ratingCount": "28 ratings",
+            "ratingCountV2": "28"
+          }
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "127044029",
+        "name": "Dutch Truffle Cake [1/2kg]",
+        "category": "Cakes",
+        "description": "Dark chocolate ganache with chocolate sponge.",
+        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/27/94c6b25c-035d-4802-849f-db85c851b442_b3b208a8-ff63-4207-be54-7a2e4cad293d.jpg",
+        "inStock": 1,
+        "price": 62500,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.6",
+            "ratingCount": "70 ratings",
+            "ratingCountV2": "70"
+          }
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "133485668",
+        "name": "Eggless Rich Chocolate Pastry [1 Piece]",
+        "category": "Pastries",
+        "description": "Chocolate sponge layered with rich and smooth chocolate cream, and decorated with dark chocolate.",
+        "imageId": "19292e18b114587b57a39f76c23a5007",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 12500,
+        "offerTags": [
+          {
+            "title": "20% OFF",
+            "subTitle": "USE PARTY",
+            "textColor": "#DB6742",
+            "backgroundColor": "#FAE8E3",
+            "matchText": "SILD"
+          }
+        ],
+        "isBestseller": true,
+        "ratings": {
+          "aggregatedRating": {
+            "rating": "4.6",
+            "ratingCount": "37 ratings",
+            "ratingCountV2": "37"
+          }
+        }
+      }
+    }
+  },
+  {
+    "card": {
+      "info": {
+        "id": "133485669",
+        "name": "Eggless Butterscotch & Milk Chocolate Pastry [1 Piece]",
+        "category": "Pastries",
+        "description": "Moist  butterscotch pastry made with vanilla cream, homemade butterscotch sauce, crunchy butterscotch and glaze with milk chocolate galze.",
+        "imageId": "7190a40e52501f5b5de9b66c5e2488a8",
+        "inStock": 1,
+        "isVeg": 1,
+        "price": 12000,
+        "offerTags": [
+          {
+            "title": "20% OFF",
+            "subTitle": "USE PARTY",
+            "textColor": "#DB6742",
+            "backgroundColor": "#FAE8E3",
+            "matchText": "SILD"
+          }
+        ],
         "isBestseller": true,
         "ratings": {
           "aggregatedRating": {
             "rating": "4.3",
-            "ratingCount": "312 ratings",
-            "ratingCountV2": "312"
+            "ratingCount": "33 ratings",
+            "ratingCountV2": "33"
           }
         }
       }
@@ -147,20 +391,20 @@ const cakezone= [
   {
     "card": {
       "info": {
-        "id": "46349428",
-        "name": "Choco Mud Jar Cake",
-        "category": "Jar Cake",
-        "description": "Decadent delight features layers of moist chocolate cake generously infused with velvety chocolate this dessert is a celebration of pure chocolate bliss (1 Serving, 423 calories, 4gms Protein, 44gms Carbs).",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/4/26996d9e-0fa3-45d9-969a-d55f23b33d97_ce6ccca9-ad81-4c85-bef5-c692203b3e2e.jpg",
+        "id": "127044055",
+        "name": "Eggless Dutch Truffle Pastry [1 Piece]",
+        "category": "Pastries",
+        "description": "Dark chocolate ganache with chocolate sponge.",
+        "imageId": "0872a3ab7f5d4d94e16ee81b9fee8b2f",
         "inStock": 1,
         "isVeg": 1,
-        "defaultPrice": 14900,
+        "price": 13000,
         "isBestseller": true,
         "ratings": {
           "aggregatedRating": {
-            "rating": "4.0",
-            "ratingCount": "796 ratings",
-            "ratingCountV2": "796"
+            "rating": "4.6",
+            "ratingCount": "118 ratings",
+            "ratingCountV2": "118"
           }
         }
       }
@@ -169,124 +413,20 @@ const cakezone= [
   {
     "card": {
       "info": {
-        "id": "46349473",
-        "name": "Rasmalai Jar cake",
-        "category": "Jar Cake",
-        "description": "Divine dessert creation features layers of moist and airy vanilla sponge cake, delicately infused with the rich essence of traditional rasmalai, and adorned with luscious pieces of pistachio for a delightful crunch. (1 Serving, 531 calories, 6gms Protein, 93gms Carbs).",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/12/4/632bd1f3-ba7e-4ce0-ae73-ff6a91537583_9ebfb7ac-e71b-4904-8b94-a6eecc140c3d.jpg",
+        "id": "127044065",
+        "name": "Chocoholic Pastry [1 Piece]",
+        "category": "Pastries",
+        "description": "Three layers of chocolate mousse: white, milk and dark chocolate mousse.",
+        "imageId": "54147efdb93924058d305ec8a85137fe",
         "inStock": 1,
         "isVeg": 1,
-        "defaultPrice": 20900,
+        "price": 15000,
+        "isBestseller": true,
         "ratings": {
           "aggregatedRating": {
-            "rating": "3.6",
-            "ratingCount": "500 ratings",
-            "ratingCountV2": "500"
-          }
-        }
-      }
-    }
-  },
-  {
-    "card": {
-      "info": {
-        "id": "46349471",
-        "name": "Rasmalai Eggless Cake - Chef's Special",
-        "category": "Mithai Cakes",
-        "description": "[Eggless/Veg] A delightful Indian dessert that combines the soft, spongy texture of Rasmalai and the sweetness of cake. It's a creative and indulgent treat that's perfect for special occasions. (6 Serving, 197 Calories each, Protein-3g each, Carbs-31g each)",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/30/c6605213-2554-46cf-9d32-12c883f6bd8f_8d1e3db1-c6c3-44f9-8155-52b37beb5350.jpg_compressed",
-        "inStock": 1,
-        "isVeg": 1,
-        "defaultPrice": 61900,
-        "ratings": {
-          "aggregatedRating": {
-            "rating": "4.2",
-            "ratingCount": "163 ratings",
-            "ratingCountV2": "163"
-          }
-        }
-      }
-    }
-  },
-  {
-    "card": {
-      "info": {
-        "id": "95047768",
-        "name": "Vanilla Pineapple Lunch Box Cake",
-        "category": "Bento & Mini Cakes",
-        "description": "Serves 1 | [Eggless]Bento Cakes are always the best for sweeter celebrations, try our special bento cake and mark the memories.(one bento cake, 644 calories, 11gms Proteins, 103gms carbs)",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/8/22/1b5ee959-262b-47bd-a243-2732e640bd83_f63d11f2-85e6-45bb-862a-8b7a59c863eb.jpg_compressed",
-        "inStock": 1,
-        "isVeg": 1,
-        "price": 22900,
-        "ratings": {
-          "aggregatedRating": {
-            "rating": "2.9",
-            "ratingCount": "9 ratings",
-            "ratingCountV2": "9"
-          }
-        }
-      }
-    }
-  },
-  {
-    "card": {
-      "info": {
-        "id": "95047762",
-        "name": "Chocolate Truffle Lunch Box Cake",
-        "category": "Bento & Mini Cakes",
-        "description": "Serves 1 | [Eggless]Lunch box Bento Cakes are always the best for sweeter celebrations, try our special bento cake and mark the memories.(one bento cake, 1416 calories, 15gms Proteins, 185gms carbs)",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/8/22/20501554-0877-4e23-aba4-bebf377c38fa_a175f244-df51-4602-b329-ce8d1ed48c9d.jpg_compressed",
-        "inStock": 1,
-        "isVeg": 1,
-        "price": 29900,
-        "ratings": {
-          "aggregatedRating": {
-            "rating": "4.4",
-            "ratingCount": "29 ratings",
-            "ratingCountV2": "29"
-          }
-        }
-      }
-    }
-  },
-  {
-    "card": {
-      "info": {
-        "id": "108774463",
-        "name": "Pack of Any Two Pastries",
-        "category": "Celebration Day Combo",
-        "description": "Pastries are edible love. More the pastries, more the love. Do feel our love for you and try out various of our freshly crafted pastries. (1 Serving, 314 calories, 5gms Protein, 53gms Carbs).",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/4/5/ba8e778d-bc33-45b4-9804-250f85bfc2be_f2f3622c-6b63-439a-a5fc-19b5fe11c103.jpg",
-        "inStock": 1,
-        "isVeg": 1,
-        "price": 20900,
-        "ratings": {
-          "aggregatedRating": {
-            "rating": "4.2",
-            "ratingCount": "91 ratings",
-            "ratingCountV2": "91"
-          }
-        }
-      }
-    }
-  },
-  {
-    "card": {
-      "info": {
-        "id": "108774464",
-        "name": "Pack of Two Choco Lava Cakes",
-        "category": "Celebration Day Combo",
-        "description": "It is a mouthwatering dessert that combines rich, velvety chocolate cake with a luscious molten chocolate center. These heavenly treats are perfect for satisfying your chocolate cravings and making any occasion extra special.",
-        "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/6/7818a365-20c4-403e-8572-e9c072070ce0_604fcc96-279c-4abd-bdfd-d1507f6f3354_compressed",
-        "inStock": 1,
-        "isVeg": 1,
-        "price": 20900,
-        "ratings": {
-          "aggregatedRating": {
-            "rating": "4.5",
-            "ratingCount": "36 ratings",
-            "ratingCountV2": "36"
+            "rating": "4.6",
+            "ratingCount": "119 ratings",
+            "ratingCountV2": "119"
           }
         }
       }

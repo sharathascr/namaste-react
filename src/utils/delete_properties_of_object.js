@@ -17,7 +17,7 @@ file.forEach((res) => {
   delete res.card.hideRestaurantDetails;
 });
 
-const fileContent = `const cakezone= ${JSON.stringify(file, null, 2)}\n\n`;
+const fileContent = `const theobrama= ${JSON.stringify(file, null, 2)}\n\n`;
 // console.log(file);
 fs.writeFile(outputPath, fileContent, (err) => {
   if (err) {

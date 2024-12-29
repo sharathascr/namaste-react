@@ -49,10 +49,11 @@
 .star-small {
   font-size: 13px;
   padding-bottom: 10px;
-  color: red;
+  color: #116649;
 }
 .rating {
   font-size: 0.9rem;
+  color: #116649;
 }
 .res-items-section {
   margin: 30px;
@@ -69,10 +70,12 @@
 }
 .item-price {
   margin-top: 10px;
+  color: #161a1f;
 }
 .item-container {
   margin-top: 30px;
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid gray;
 }
 .item-img {
@@ -97,4 +100,14 @@
   border-radius: 7px;
   padding: 4px 20px;
   box-shadow: 0px 3px 7px gray;
+}
+.noOfratings {
+  margin-left: 3px;
+  color: #676a6d;
+  font-size: 0.9rem;
+}
+.no-items-heading {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
