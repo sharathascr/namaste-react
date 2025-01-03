@@ -37,6 +37,7 @@ function Restaurant() {
   } catch (error) {
     console.log("Error in fetching restaurant", error);
   }
+  console.log(restaurant.items);
   return (
     <div id="restaurant-items-page">
       {restaurant ? (

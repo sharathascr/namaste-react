@@ -58,7 +58,6 @@ userRoutes.post("/login-user", async (req, res) => {
     if (isMatch) {
       res.status(200).send({ message: "Login successful", user: existingUser });
     } else {
-      console.log("Hee");
       res.status(401).send({ message: "invalid password" });
     }
   } catch (error) {
@@ -66,4 +65,18 @@ userRoutes.post("/login-user", async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
+
+//add-item
+userRoutes.post("/add-item", async (req, res) => {
+  const { username, id, name, category, price, description } = req.body;
+  const user = await User.findOne({ username });
+  if (!user) {
+    return res.status(404).send({ message: "user does not exists" });
+  }
+  const existingItemIndex = user.cart.findIndex((item) => item.name === name);
+  // if (existingItemIndex >= 0) {
+  //   user.cart[existingItemIndex].quantity += 1;
+  // }
+});
+
 module.exports = userRoutes;
