@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Signup.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import axios from "axios";
 
 function Signup() {
+  const [showPassword, setShowPassword] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -57,7 +59,7 @@ function Signup() {
         />
         {errors.email && <p className="error-text">{errors.email.message}</p>}
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           placeholder="Password..."
           {...register("password", {
             required: "password is required",
@@ -67,6 +69,17 @@ function Signup() {
             },
           })}
         />
+        <div id="eyeSymbol">
+          {showPassword ? (
+            <div onClick={() => setShowPassword(!showPassword)}>
+              <i className="fa-regular fa-eye"></i>
+            </div>
+          ) : (
+            <div onClick={() => setShowPassword(!showPassword)}>
+              <i className="fa-regular fa-eye-slash"></i>
+            </div>
+          )}
+        </div>
         {errors.password && (
           <p className="error-text">{errors.password.message}</p>
         )}

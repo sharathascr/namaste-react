@@ -23,3 +23,11 @@
   color: red;
   font-size: 0.8rem;
 }
+.signup-inputs {
+  position: relative;
+}
+#eyeSymbol {
+  position: absolute;
+  bottom: 55px;
+  left: 300px;
+}

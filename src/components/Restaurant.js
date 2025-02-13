@@ -8,22 +8,7 @@ import axios from "axios";
 function Restaurant() {
   const { restaurantName } = useParams();
   const [restaurant, setRestaurant] = useState(null);
-  // try {
-  //   useEffect(() => {
-  //     const fetchData = async () => {
-  //       const result =
-  //         await axios.get(`http://localhost:6060/api/restaurants/getRestaurantByName/${restaurantName}
-  //           `);
-  //       setRestaurant(result.data);
-  //     };
-  //     fetchData();
-  //   }, [restaurantName]);
-  // } catch (error) {
-  //   console.log("Error in fetching restaurant", error);
-  // }
-  const handleAddItem = (res) => {
-    console.log(res.id);
-  };
+  const handleAddItem = (res) => {};
   try {
     const { data, loading, error } = useFetchRestaurant(
       `http://localhost:6060/api/restaurants/getRestaurantByName/${restaurantName}`
@@ -37,7 +22,6 @@ function Restaurant() {
   } catch (error) {
     console.log("Error in fetching restaurant", error);
   }
-  console.log(restaurant.items);
   return (
     <div id="restaurant-items-page">
       {restaurant ? (

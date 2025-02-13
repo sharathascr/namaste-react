@@ -5,6 +5,7 @@ import Filter from "./Filter";
 import { useFetch } from "./hooks/useFetch";
 import ShimmerUI from "./ShimmerUI";
 import Search from "./Search";
+import PromotedRestraurantCard from "./PromotedRestraurantCard";
 
 function Home() {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
@@ -43,7 +44,11 @@ function Home() {
         {listOfRestaurants.length != 0 ? (
           listOfRestaurants.map((restaurant, index) => (
             <div className="res-container" key={index}>
-              <RestaurantCard restaurant={restaurant} />
+              {restaurant.isPromoted ? (
+                <PromotedRestraurantCard restaurant={restaurant} />
+              ) : (
+                <RestaurantCard restaurant={restaurant} />
+              )}
             </div>
           ))
         ) : (

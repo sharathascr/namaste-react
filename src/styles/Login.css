@@ -5,6 +5,9 @@
 .login-content {
   margin: auto;
 }
+.login-inputs {
+  position: relative;
+}
 .login-heading {
   font-size: 35px;
   font-weight: 400;
@@ -32,4 +35,9 @@
 .error-text {
   color: red;
   font-size: 0.8rem;
+}
+#eyeSymbol {
+  position: absolute;
+  bottom: 55px;
+  left: 300px;
 }

@@ -5,6 +5,7 @@ const restaurantSchema = new mongoose.Schema({
   name: String,
   cloudinaryImageId: String,
   locality: String,
+  isPromoted: Boolean,
   areaName: String,
   costForTwo: String,
   cuisines: [String],

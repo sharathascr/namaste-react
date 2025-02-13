@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../styles/Login.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 import { AppContext } from "../context/AppContextProvider";
 
 function Login() {
+  const [showPassword, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
@@ -60,7 +61,7 @@ function Login() {
           {errors.email && <p className="error-text">{errors.email.message}</p>}
           <input
             placeholder="password"
-            type="password"
+            type={showPassword ? "text" : "password"}
             {...register("password", {
               required: "password is required",
               minLength: {
@@ -69,6 +70,17 @@ function Login() {
               },
             })}
           />
+          <div id="eyeSymbol">
+            {showPassword ? (
+              <div onClick={() => setShowPassword(!showPassword)}>
+                <i className="fa-regular fa-eye"></i>
+              </div>
+            ) : (
+              <div onClick={() => setShowPassword(!showPassword)}>
+                <i className="fa-regular fa-eye-slash"></i>
+              </div>
+            )}
+          </div>
           {errors.password && (
             <p className="error-text">{errors.password.message}</p>
           )}
